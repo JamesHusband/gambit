@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Layout should render with children 1`] = `
+<div
+  class="flex flex-col h-screen bg-[#242424]"
+>
+  Test
+</div>
+`;
