@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ChessBoard should render 1`] = `
+<div>
+  <div
+    class="aspect-square w-full border border-gray-800 rounded-md relative"
+  >
+    <div
+      class="grid grid-cols-8 h-full"
+    />
+  </div>
+</div>
+`;

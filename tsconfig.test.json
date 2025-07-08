@@ -6,7 +6,8 @@
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": false,
-        "noEmit": true
+        "noEmit": true,
+        "esModuleInterop": true
     },
     "include": [
         "src/**/*.test.ts",
