@@ -1,36 +1,26 @@
 import type { ChessFile, ChessRank } from "../../../types";
+import { createLabelConfigs } from "../../../utils";
+import { BoardLabel } from "./BoardLabel";
 
-export type RowLabelsProps = {
-  labels: ChessFile[];
-  direction: "row";
+type Props = {
+  files: ChessFile[];
+  ranks: ChessRank[];
 };
 
-export type ColLabelsProps = {
-  labels: ChessRank[];
-  direction: "col";
+export const BoardLabels = ({ files, ranks }: Props) => {
+  const labelConfigs = createLabelConfigs(files, ranks);
+
+  return (
+    <>
+      {labelConfigs.map((config) => (
+        <div key={config.key} className={config.className}>
+          {config.direction === "row" ? (
+            <BoardLabel labels={config.labels as ChessFile[]} direction="row" />
+          ) : (
+            <BoardLabel labels={config.labels as ChessRank[]} direction="col" />
+          )}
+        </div>
+      ))}
+    </>
+  );
 };
-
-type BoardLabelsProps = RowLabelsProps | ColLabelsProps;
-
-export const BoardLabels = ({ labels, direction }: BoardLabelsProps) => (
-  <div
-    className={
-      direction === "row"
-        ? `grid grid-cols-8 w-full h-8`
-        : `flex flex-col w-8 h-full`
-    }
-  >
-    {labels.map((label) => (
-      <div
-        key={label}
-        className={
-          direction === "row"
-            ? "flex items-center justify-center h-full text-sm text-gray-400 font-medium"
-            : "flex-1 flex items-center justify-center text-sm text-gray-400 font-medium"
-        }
-      >
-        {label}
-      </div>
-    ))}
-  </div>
-);

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BoardTile } from ".";
 
-jest.mock("../../../utils", () => ({
+jest.mock("../../../../utils", () => ({
   cn: (...args: string[]) => args.join(" "),
 }));
 

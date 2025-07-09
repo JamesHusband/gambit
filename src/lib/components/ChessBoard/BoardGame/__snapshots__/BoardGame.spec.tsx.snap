@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BoardGame should render 1`] = `
+<div>
+  <div
+    class="col-start-2 row-start-2 aspect-square w-full h-full"
+  >
+    <div
+      class="grid grid-cols-8 grid-rows-8 w-full h-full"
+    >
+      <div
+        data-testid="board-tile"
+      >
+        a8
+         
+        0
+         
+        0
+      </div>
+    </div>
+  </div>
+</div>
+`;

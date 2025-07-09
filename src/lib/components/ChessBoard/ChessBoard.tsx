@@ -1,26 +1,25 @@
-"use client";
-
 import { useChessBoard } from "../../hooks";
-import { BoardTile } from "./BoardTile";
+import type { ChessFile, ChessRank } from "../../types";
+import { BoardLabels } from "./BoardLabels";
+import { BoardGame } from "./BoardGame";
 
 export const ChessBoard = () => {
-  const { board } = useChessBoard();
-
-  if (board.length === 0) {
-    return <div>Loading board...</div>;
-  }
+  const { files, ranks } = useChessBoard();
 
   return (
-    <div className="aspect-square w-full border border-gray-800 rounded-md relative">
-      <div className="grid grid-cols-8 h-full">
-        {board.flat().map((square, idx) => (
-          <BoardTile
-            key={square.position}
-            position={square.position}
-            rowIndex={Math.floor(idx / 8)}
-            colIndex={idx % 8}
-          />
-        ))}
+    <div className="flex justify-center items-center">
+      <div
+        className="grid border border-gray-800 rounded-md w-full h-full"
+        style={{
+          gridTemplateRows: "32px 1fr 32px",
+          gridTemplateColumns: "32px 1fr 32px",
+        }}
+      >
+        <BoardLabels
+          files={files as ChessFile[]}
+          ranks={ranks as ChessRank[]}
+        />
+        <BoardGame />
       </div>
     </div>
   );

@@ -1,1 +1,1 @@
-export * from "./BoardLabels";
+export { BoardLabels } from "./BoardLabels";
