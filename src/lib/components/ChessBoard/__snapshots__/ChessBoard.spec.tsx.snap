@@ -3,11 +3,19 @@
 exports[`ChessBoard should render 1`] = `
 <div>
   <div
-    class="aspect-square w-full border border-gray-800 rounded-md relative"
+    class="flex justify-center items-center"
   >
     <div
-      class="grid grid-cols-8 h-full"
-    />
+      class="grid border border-gray-800 rounded-md w-full h-full"
+      style="grid-template-rows: 32px 1fr 32px; grid-template-columns: 32px 1fr 32px;"
+    >
+      <div>
+        BoardLabels
+      </div>
+      <div>
+        BoardGame
+      </div>
+    </div>
   </div>
 </div>
 `;

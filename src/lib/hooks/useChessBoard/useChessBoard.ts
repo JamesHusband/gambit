@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import type { Square } from "../../types";
 import { initializeBoard } from "../../utils";
 
-export function useChessBoard() {
+const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
+const ranks = [8, 7, 6, 5, 4, 3, 2, 1];
+
+export const useChessBoard = () => {
   const [board, setBoard] = useState<Square[][]>([]);
 
   useEffect(() => {
-    setBoard(initializeBoard());
+    setBoard(initializeBoard({ ranks, files }));
   }, []);
 
-  return { board };
-}
+  return { board, files, ranks };
+};

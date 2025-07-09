@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BoardTile should render 1`] = `
+<div>
+  <div
+    class="flex items-center justify-center w-full h-full bg-[#eeeed2]"
+    data-testid="board-tile"
+  />
+</div>
+`;
