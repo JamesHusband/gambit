@@ -2,14 +2,14 @@
 
 exports[`BoardContainer should render with children 1`] = `
 <div>
-  <div
-    class="flex-1 flex items-center justify-center p-8"
+  <main
+    class="flex-1 flex items-center justify-center"
   >
     <div
-      class="w-full max-w-[800px]"
+      class="w-full max-w-[700px]"
     >
       Test
     </div>
-  </div>
+  </main>
 </div>
 `;
