@@ -7,7 +7,7 @@ export const initializeBoard = ({
   ranks: number[];
   files: string[];
 }): Square[][] => {
-  return ranks.map((rank) =>
+ return ranks.map((rank) =>
     files.map((file) => ({
       position: `${file}${rank}`,
     }))

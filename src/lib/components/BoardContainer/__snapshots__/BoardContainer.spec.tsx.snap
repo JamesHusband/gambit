@@ -11,5 +11,4 @@ exports[`BoardContainer should render with children 1`] = `
       Test
     </div>
   </main>
-</div>
 `;

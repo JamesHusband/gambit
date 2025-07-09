@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import { ChessBoard } from ".";
-
 jest.mock("../../hooks", () => ({
   useChessBoard: () => ({
     board: [[{ position: "a8" }], [{ position: "a7" }]],
@@ -23,4 +22,10 @@ describe("ChessBoard", () => {
     const { container } = render(<ChessBoard />);
     expect(container).toMatchSnapshot();
   });
+
+  it("should render tiles", () => {
+    render(<ChessBoard />);
+    expect(BoardTile).toHaveBeenCalledTimes(2);
+  });
+
 });

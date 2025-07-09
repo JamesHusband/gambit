@@ -7,6 +7,6 @@ export const Logo = () => (
       height={32}
       className="mr-3"
     />
-    <span className="font-bold text-2xl text-white">Gambit</span>
+<span className="font-bold text-2xl text-white">Gambit</span>
   </>
 );
